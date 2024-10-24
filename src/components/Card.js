@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Card = (props) => {
+  const [likes,setLikes] = useState(0)
   return (
     <div className={`card card-vertical `+ props.type}>
       <img
@@ -10,6 +11,10 @@ const Card = (props) => {
       />
       <div className="card-heading">{props.title}</div>
       <div className="card-description">{props.description}</div>
+      <div>{likes}</div>
+      <button onClick={()=>{
+        setLikes(likes+1)
+      }}>Like</button>
     </div>
   );
 };
