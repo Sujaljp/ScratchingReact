@@ -5,6 +5,8 @@ import Section from './Section'
 import { artists } from '../ArtistsData'
 
 const Dashboard = () => {
+
+  
     jsxPlaylist = playlists.map((val,index)=> {
         return <Card key={index} title={val.title} image={val.image} description={val.subtitle}/>
     })

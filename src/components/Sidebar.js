@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SongCard from "./SongCard";
-import { song } from "../SongsData";
 
 const SideBar = () => {
-  const SongList = song.list.map((value, index, array) => {
+
+  const [songList,setSongList] = useState([]);
+
+  useEffect(()=>{
+    fetchSong()
+  },[])
+
+  const fetchSong = async () =>{
+    const data = await fetch("https://www.jiosaavn.com/api.php?__call=playlist.getDetails&listid=903166403&api_version=4&_format=json&_marker=0&ctx=wap6dot0")
+    const json = await data.json()
+    setSongList(json?.list)
+  }
+  const SongList = songList.map((value, index, array) => {
     return <SongCard key={index} song={value} />;
   });
   return (
