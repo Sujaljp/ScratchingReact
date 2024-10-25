@@ -39,9 +39,7 @@ const Header = () => {
         </svg>
       </div>
       <ul className="nav-container">
-        <li className="search-container">
-          <input className="search" placeholder="Search" />
-        </li>
+        
         <li className="playlist-container">Playlist</li>
       </ul>
     </div>
