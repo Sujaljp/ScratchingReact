@@ -16,7 +16,7 @@ import Body from "./components/Body";
 
 
 const AppLayout = () => {
-  console.log("hi")
+
   return (
     <div className="main">
       <Header />
