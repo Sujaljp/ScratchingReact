@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header">
-      <div className="logo-container">
+      <Link>
+        <div className="logo-container">
         <svg
           width="371.41001586914064"
           height="74.03655260922706"
@@ -38,9 +40,14 @@ const Header = () => {
           </g>
         </svg>
       </div>
+      </Link>
       <ul className="nav-container">
-        
-        <li className="playlist-container">Playlist</li>
+        <li className="playlist-container">
+          <Link to={'/parent'}>Parent</Link>
+        </li>
+        <li className="playlist-container">
+          <Link to={'/playlist'}>Playlist</Link>
+        </li>
       </ul>
     </div>
   );

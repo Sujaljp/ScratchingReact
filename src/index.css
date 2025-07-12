@@ -8,10 +8,7 @@ body {
     background-image: linear-gradient(to right bottom, #ff0060, #d00f74, #9a267a, #632d70, #342959, #292246, #1f1a34, #161322, #160e1a, #130912, #0c0408, #000000);
 }
 
-/* 
-        background-color: rgb(255, 247, 237);
-        background-image: radial-gradient(at 98% 39%, rgb(129, 140, 248) 0, transparent 56%), radial-gradient(at 43% 31%, rgb(243, 232, 255) 0, transparent 5%), radial-gradient(at 43% 85%, rgb(217, 70, 239) 0, transparent 41%), radial-gradient(at 82% 37%, rgb(16, 185, 129) 0, transparent 33%), radial-gradient(at 67% 81%, rgb(236, 253, 245) 0, transparent 17%), radial-gradient(at 88% 24%, rgb(214, 211, 209) 0, transparent 85%);
-       */
+
 
 .header {
     display: flex;

@@ -1,13 +1,14 @@
-import React from "react";
-import Dashboard from "./Dashboard";
 import SideBar from "./Sidebar";
+import { Outlet } from "react-router-dom";
 
 
 const Body = () => {
+  
   return (
     <div className="body">
       <SideBar />
-      <Dashboard />
+      <Outlet />
+      
     </div>
   );
 };

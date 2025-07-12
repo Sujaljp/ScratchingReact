@@ -20,13 +20,18 @@ const SideBar = () => {
       setSongList(json?.list);
       setFilterSongList(json?.list)
     } catch (error) {
+
+      console.log("Failed to fetch song from jio savan api")
       setSongList(song.list);
       setFilterSongList(song.list)
     }
   };
+  
+  
   const SongList = filterSongList.map((value, index, array) => {
     return <SongCard key={index} song={value} />;
   });
+
   return (
     <div className="left-section">
       <div className="heading">Your Songs</div>
