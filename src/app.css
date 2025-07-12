@@ -13,7 +13,7 @@ body {
         background-image: radial-gradient(at 98% 39%, rgb(129, 140, 248) 0, transparent 56%), radial-gradient(at 43% 31%, rgb(243, 232, 255) 0, transparent 5%), radial-gradient(at 43% 85%, rgb(217, 70, 239) 0, transparent 41%), radial-gradient(at 82% 37%, rgb(16, 185, 129) 0, transparent 33%), radial-gradient(at 67% 81%, rgb(236, 253, 245) 0, transparent 17%), radial-gradient(at 88% 24%, rgb(214, 211, 209) 0, transparent 85%);
        */
 
-.header {
+/* .header {
     display: flex;
     position: sticky;
     top: 0;
@@ -99,7 +99,7 @@ body {
     width: 75%;
     border: 1px solid rgba(255, 255, 255, .3);
     padding: 1rem;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
 
 }
 
@@ -121,7 +121,7 @@ h1,h2,h3,h4,h5{
 }
 .h-container-body{
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     gap: 2%;
     overflow-x: scroll;
     padding-bottom: 6px;
@@ -169,7 +169,7 @@ h1,h2,h3,h4,h5{
 .card-vertical{
     gap: 5px;
     flex-direction: column;
-    /* width: 15%; */
+    width: 15%;
 }
 
 .artist{
@@ -206,4 +206,4 @@ h1,h2,h3,h4,h5{
 
 .song-container::-webkit-scrollbar{
     display: none;
-}
+} */

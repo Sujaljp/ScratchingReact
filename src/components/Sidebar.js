@@ -35,9 +35,9 @@ const SideBar = () => {
   return (
     <div className="left-section">
       <div className="heading">Your Songs</div>
-      <div className="search-container">
+      <div className="search-container flex items-center">
         <input
-          className="search"
+          className="search border-solid border-black"
           placeholder="Taa raa raara"
           value={searchString}
           onChange={(e) => {

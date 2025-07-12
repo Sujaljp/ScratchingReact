@@ -9,7 +9,6 @@ import Dashboard from "./components/Dashboard";
 import Album from "./components/Album";
 import About from "./components/About";
 // import ParentClass from "./components/ClassBasedComponents/ParentClass";
-import useOnlineStatus from "./utils/hooks/useOnlineStatus";
 
 //Low level design of ui
 // Header
@@ -27,13 +26,9 @@ const ParentClass = lazy(() => {
 });
 
 const AppLayout = () => {
-  const onlineStatus = useOnlineStatus();
 
-  if (!onlineStatus) {
-    return <div>You are offline please check your internet connection</div>;
-  }
   return (
-    <div className="main">
+    <div className="main text-white">
       <Header />
       <Body />
     </div>

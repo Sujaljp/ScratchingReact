@@ -1,16 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/hooks/useOnlineStatus.js";
+
 
 const Header = () => {
+  const onlineStatus = useOnlineStatus();
+
   return (
-    <div className="header">
+    <div className="header flex justify-between sticky bg-[rgba(255,255,255,0.1)] 
+            shadow-[0_4px_30px_rgba(0,0,0,0.1)] 
+            backdrop-blur-[10px] backdrop-saturate-[110%]
+            border border-[rgba(255,255,255,0.3)] px-8">
       <Link>
         <div className="logo-container">
         <svg
           width="371.41001586914064"
           height="74.03655260922706"
           viewBox="0 0 370 73.75548126054201"
-          className="looka-1j8o68f logo"
+          className="looka-1j8o68f logo w-40 h-14"
         >
           <defs id="SvgjsDefs1926"></defs>
           <g
@@ -41,11 +48,12 @@ const Header = () => {
         </svg>
       </div>
       </Link>
-      <ul className="nav-container">
-        <li className="playlist-container">
+      <ul className="nav-container flex  gap-4 items-center">
+        <li className="text-lg ">Online Status {onlineStatus? "🟢":"🔴"}</li>
+        <li className="text-lg ">
           <Link to={'/parent'}>Parent</Link>
         </li>
-        <li className="playlist-container">
+        <li className="text-lg playlist-container">
           <Link to={'/playlist'}>Playlist</Link>
         </li>
       </ul>
