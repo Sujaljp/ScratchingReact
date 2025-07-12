@@ -17,8 +17,8 @@ const Dashboard = () => {
 
 
   return (
-    <div className="right-section">
-        <div className="heading">For you Sections</div>
+    <div className="right-section box-border h-full w-3/4 border border-[rgba(255,255,255,0.3)] p-4">
+        <div className="heading  text-2xl mb-4 font-medium">For you Sections</div>
         <Section heading={"Discover"} list={jsxPlaylist}/>
         <Section heading={"Artists"} list={jsxArtists}/>
       </div>

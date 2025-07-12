@@ -6,204 +6,24 @@ body {
     height: 100vh;
     font-family: sans-serif;
     background-image: linear-gradient(to right bottom, #ff0060, #d00f74, #9a267a, #632d70, #342959, #292246, #1f1a34, #161322, #160e1a, #130912, #0c0408, #000000);
+/*  background-color: rgb(255, 247, 237);
+    background-image: radial-gradient(at 98% 39%, rgb(129, 140, 248) 0, transparent 56%), radial-gradient(at 43% 31%, rgb(243, 232, 255) 0, transparent 5%), radial-gradient(at 43% 85%, rgb(217, 70, 239) 0, transparent 41%), radial-gradient(at 82% 37%, rgb(16, 185, 129) 0, transparent 33%), radial-gradient(at 67% 81%, rgb(236, 253, 245) 0, transparent 17%), radial-gradient(at 88% 24%, rgb(214, 211, 209) 0, transparent 85%);
+*/
 }
 
-/* 
-        background-color: rgb(255, 247, 237);
-        background-image: radial-gradient(at 98% 39%, rgb(129, 140, 248) 0, transparent 56%), radial-gradient(at 43% 31%, rgb(243, 232, 255) 0, transparent 5%), radial-gradient(at 43% 85%, rgb(217, 70, 239) 0, transparent 41%), radial-gradient(at 82% 37%, rgb(16, 185, 129) 0, transparent 33%), radial-gradient(at 67% 81%, rgb(236, 253, 245) 0, transparent 17%), radial-gradient(at 88% 24%, rgb(214, 211, 209) 0, transparent 85%);
-       */
-
-/* .header {
-    display: flex;
-    position: sticky;
-    top: 0;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem 4rem;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px) saturate(110%);
-    border: 1px solid rgba(255, 255, 255, .3);
-    height: 9vh;
-}
-
-
-
-.logo {
-    font-weight: bold;
-    width: 250px;
-}
-
-.nav-container {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    list-style: none;
-    padding: 0;
-    font-size: 20px;
-}
-
-.nav-container>li {
-    margin: 0;
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
-}
-
-.search-container{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 5px;
-}
-
-.search {
-    font-size: 20px;
-    padding: 8px;
-    color: #001545;
-    border: 2px solid white;
-    border-radius: 10px;
-}
- 
-.search-btn{
-    background-color: #ff0060;
-    border-radius: 5px;
-    border: white 1px solid;
-}
-
-.search-btn img{
-    width: 36px;
-}
-
-
-.body {
-    height: 90vh;
-    display: flex;
-    color: white;
-}
-
-.left-section{
-    box-sizing: border-box;
-    height: 100%;
-    width: 25%;
-    border: 1px solid rgba(255, 255, 255, .3);
-    padding: 1rem;
-    overflow-y: hidden;
-    
-
-}
-
-.right-section{
-    box-sizing: border-box;
-    height: 100%;
-    width: 75%;
-    border: 1px solid rgba(255, 255, 255, .3);
-    padding: 1rem;
-    overflow-y: scroll;
-
-}
-
-.heading{
-    font-size: 25px;
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-h1,h2,h3,h4,h5{
-    margin: 0;
-}
-
-.h-container{
-    padding: 6px;
-}
-.h-container-heading{
-    margin-bottom: .5rem;
-}
-.h-container-body{
-    display: flex;
-    align-items: center;
-    gap: 2%;
-    overflow-x: scroll;
-    padding-bottom: 6px;
-    -ms-overflow-style: none;
+.song-container::-webkit-scrollbar {
+    display: none;
 }
 
 .h-container-body::-webkit-scrollbar {
     display: none;
-  }
-
-.card{
-    box-sizing: border-box;
-    display: flex;
-    box-sizing: border-box;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 5px;
-    padding: 10px;
 }
 
-.card:hover{
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px) saturate(110%);
-    border: 1px solid rgba(255, 255, 255, .3);
-}
-
-.card-image{
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-.card-heading{
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.card-description{
-    font-size: 16px;
-    font-weight: 600;
-    color: rgb(200, 200, 200);
-}
-
-.card-vertical{
-    gap: 5px;
-    flex-direction: column;
-    width: 15%;
-}
-
-.artist{
+.artist {
     text-align: center;
 }
 
-.artist .card-image{
+.artist .card-image {
     border-radius: 100%;
     margin-bottom: 5px;
 }
-
-.horizontal{
-    gap: 1rem;
-    align-items: center; 
-}
-
-.horizontal .card-image{
-    width: 60px;
-}
-
-.horizontal .card-heading{
-    height: 18px;
-    width: max-content;
-    text-wrap: nowrap;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.song-container{
-    height: 95%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-.song-container::-webkit-scrollbar{
-    display: none;
-} */
