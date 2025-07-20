@@ -7,7 +7,9 @@ const Body = () => {
   return (
     <div className="body flex h-[93vh]">
       <SideBar />
-      <Outlet />
+      <div className="right-section box-border h-full w-3/4 border border-[rgba(255,255,255,0.3)] p-4">
+        <Outlet />
+      </div>
       
     </div>
   );

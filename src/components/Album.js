@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 const Album = () => {
 
   const {albumId} = useParams();
+  const location = useLocation();
+  const image = location.state?.image || "https://images.pexels.com/photos/164879/pexels-photo-164879.jpeg";
+  console.log(location.state?.image)
+
 
   useEffect(()=>{
     // console.log("Component rendered here")
@@ -13,7 +17,7 @@ const Album = () => {
       <div className="album-details" style={{ display: 'flex', gap: '1.5rem' }}>
         <div className="left">
           <img
-            src="https://images.pexels.com/photos/164879/pexels-photo-164879.jpeg"
+            src={image}
             alt="album-img"
             style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "8px" }}
           />

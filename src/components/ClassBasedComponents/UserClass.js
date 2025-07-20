@@ -1,4 +1,5 @@
 import React from "react";
+import UserContext from "../../utils/UserContext";
 // import ChildClass from "./ClassBasedComponents/ChildClass";
 
 //Some notes from me
@@ -86,6 +87,11 @@ class UserClass extends React.Component {
         <h2>Naam: {this.props.name}</h2>
         <h2>Kaam: {this.props.job}</h2>
         <h2>Github name: {github_username}</h2>
+        <h2>Logged in User:  
+          <UserContext.Consumer>
+            {(data)=> data.loggedInUser}
+          </UserContext.Consumer>
+        </h2>
         <hr />
         <h3>Count: {count}</h3>
         <button onClick={()=>{

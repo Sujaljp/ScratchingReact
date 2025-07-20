@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/hooks/useOnlineStatus.js";
+import UserContext from "../utils/UserContext.js";
 
 
 const Header = () => {
   const onlineStatus = useOnlineStatus();
+
+  const {loggedInUser,setUserName} = useContext(UserContext)
 
   return (
     <div className="header flex justify-between sticky bg-[rgba(255,255,255,0.1)] 
@@ -55,6 +58,15 @@ const Header = () => {
         </li>
         <li className="text-lg playlist-container">
           <Link to={'/playlist'}>Playlist</Link>
+        </li>
+        <li className="text-lg playlist-container">
+          {loggedInUser==="Guest"? 
+          <button onClick={()=>{
+            setUserName("Sujal")
+          }} className="font-bold cursor-pointer">
+            Login
+          </button>:
+          loggedInUser}
         </li>
       </ul>
     </div>

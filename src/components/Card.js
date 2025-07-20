@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext.js";
 
 const Card = ({ type, image, title, description }) => {
+  const {loggedInUser} = useContext(UserContext)
   return (
     <div
       className={
@@ -17,15 +19,30 @@ const Card = ({ type, image, title, description }) => {
         " gap-1 "
       }
     >
-      <Link to={"/album/" + title} className="block w-36">
+      <Link to={"/album/" + title} state={{image, title, description}} className="block w-34">
         <img className="card-image mb-1" src={image} alt="img" />
         <div className="card-heading text-base  font-bold">{title}</div>
         <div className="card-description text-base font-medium text-[rgb(200,200,200)]">
           {description}
         </div>
+        <div>{loggedInUser}</div>
       </Link>
     </div>
   );
 };
+
+
+export const actorCard = (Card) =>{
+
+  return (props) =>{
+
+    return (
+    <div className="relative">
+      <label className="absolute  z-20">🎥</label>
+      <Card {...props}/>
+    </div>
+    )
+  }
+}
 
 export default Card;
