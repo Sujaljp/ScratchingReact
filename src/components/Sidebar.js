@@ -12,18 +12,24 @@ const SideBar = () => {
   }, []);
 
   const fetchSong = async () => {
-    try {
-      const data = await fetch(
+    const data = await fetch(
         "https://www.jiosaavn.com/api.php?__call=playlist.getDetails&listid=903166403&api_version=4&_format=json&_marker=0&ctx=wap6dot0"
       );
       const json = await data.json();
       setSongList(json?.list);
       setFilterSongList(json?.list);
-    } catch (error) {
-      console.log("Failed to fetch song from jio savan api");
-      setSongList(song.list);
-      setFilterSongList(song.list);
-    }
+    // try {
+    //   const data = await fetch(
+    //     "https://www.jiosaavn.com/api.php?__call=playlist.getDetails&listid=903166403&api_version=4&_format=json&_marker=0&ctx=wap6dot0"
+    //   );
+    //   const json = await data.json();
+    //   setSongList(json?.list);
+    //   setFilterSongList(json?.list);
+    // } catch (error) {
+    //   console.log("Failed to fetch song from jio savan api");
+    //   setSongList(song.list);
+    //   setFilterSongList(song.list);
+    // }
   };
 
   const SongList = filterSongList.map((value, index, array) => {
@@ -35,6 +41,7 @@ const SideBar = () => {
       <div className="heading text-2xl mb-4 font-medium">Your Songs</div>
       <div className="search-container flex items-center gap-1 mb-1.5">
         <input
+          data-testid="searchInput"
           type="text"
           className="search text-lg p-2 border-2 border-white rounded-lg
              focus:outline-none focus:ring-2 focus:ring-[#ccd5e8]"  
@@ -46,6 +53,7 @@ const SideBar = () => {
         />
         <button
           className="search-btn bg-[#ff0060] rounded-lg border-2 border-white"
+          data-testid="searchButton"
           onClick={() => {
             const filteredList = songList.filter((val) => {
               return val.title

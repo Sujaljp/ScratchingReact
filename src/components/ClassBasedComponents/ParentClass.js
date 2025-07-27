@@ -15,9 +15,10 @@ export class ParentClass extends Component {
     console.log("Parent render");
     return (
       <div>
-        ParentClass
+        <h3 className="heading">Parent Class</h3>
         <ChildClass name="1" />
         <ChildClass name="2" />
+        <button>For test cases</button>
       </div>
     );
   }

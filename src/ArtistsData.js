@@ -70,4 +70,4 @@ export const artists = [
     perma_url:
       "https://www.jiosaavn.com/artist/amitabh-bhattacharya-songs/hsNRL6ZmJmo_",
   }
-];
+]

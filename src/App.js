@@ -9,6 +9,10 @@ import Dashboard from "./components/Dashboard";
 import Album from "./components/Album";
 import About from "./components/About";
 import UserContext from "./utils/UserContext";
+import appStore from "./utils/appStore";
+import { Provider } from "react-redux";
+import Playlist from "./components/Playlist";
+
 // import ParentClass from "./components/ClassBasedComponents/ParentClass";
 
 //Low level design of ui
@@ -31,18 +35,21 @@ const AppLayout = () => {
   const [userName, setUserName] = useState("Guest")
 
   return (
-    //Provider is used to pass dynamic value to the React tree inside it 
-    // loggedInUser is Default User
-    <UserContext.Provider value={{loggedInUser:userName, setUserName}}>
-      {/* loggedInUser is "Guest" */}
-      <div className="main text-white">
-      {/* <UserContext.Provider value={{loggedInUser:"Bill gates"}}> */}
-        {/* loggedInUser is Bill gates */}
-        <Header />
-      {/* </UserContext.Provider> */}
-        <Body />
-      </div>
-    </UserContext.Provider>
+
+    <Provider store={appStore}>
+      {/* Provider is used to pass dynamic value to the React tree inside it 
+      loggedInUser is Default User */}
+      <UserContext.Provider value={{loggedInUser:userName, setUserName}}>
+        {/* loggedInUser is "Guest" */}
+        <div className="main text-white">
+        {/* <UserContext.Provider value={{loggedInUser:"Bill gates"}}> */}
+          {/* loggedInUser is Bill gates */}
+          <Header />
+        {/* </UserContext.Provider> */}
+          <Body />
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
@@ -59,7 +66,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/playlist",
-        element: <div className="">Playlist comes here</div>,
+        element: <Playlist/>,
       },
       {
         path: "/about",

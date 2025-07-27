@@ -10,7 +10,6 @@ const Body = () => {
       <div className="right-section box-border h-full w-3/4 border border-[rgba(255,255,255,0.3)] p-4">
         <Outlet />
       </div>
-      
     </div>
   );
 };

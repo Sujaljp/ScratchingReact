@@ -1,13 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/hooks/useOnlineStatus.js";
 import UserContext from "../utils/UserContext.js";
+import { useSelector } from "react-redux";
 
 
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const onlineStatus = useOnlineStatus();
 
   const {loggedInUser,setUserName} = useContext(UserContext)
+
+  const playlist = useSelector((state)=>state.playlist.songs)
+  // const playlist = []
 
   return (
     <div className="header flex justify-between sticky bg-[rgba(255,255,255,0.1)] 
@@ -52,21 +57,26 @@ const Header = () => {
       </div>
       </Link>
       <ul className="nav-container flex  gap-4 items-center">
-        <li className="text-lg ">Online Status {onlineStatus? "🟢":"🔴"}</li>
+        <li className="online text-lg">Online Status {onlineStatus? "🟢":"🔴"}</li>
         <li className="text-lg ">
           <Link to={'/parent'}>Parent</Link>
         </li>
         <li className="text-lg playlist-container">
-          <Link to={'/playlist'}>Playlist</Link>
+          <Link to={'/playlist'}>Playlist - {playlist.length}</Link>
         </li>
+        <li>
+           <button
+            className="login"
+            onClick={() => {
+              setIsLoggedIn(!isLoggedIn)
+              setUserName("Sujal")
+              }}
+          >
+            {isLoggedIn ? "Logout" : "Login"}
+          </button>
+          </li>
         <li className="text-lg playlist-container">
-          {loggedInUser==="Guest"? 
-          <button onClick={()=>{
-            setUserName("Sujal")
-          }} className="font-bold cursor-pointer">
-            Login
-          </button>:
-          loggedInUser}
+          {loggedInUser}
         </li>
       </ul>
     </div>
